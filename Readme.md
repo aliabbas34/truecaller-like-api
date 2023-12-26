@@ -15,22 +15,38 @@
 2. typescript should be installed
 3. local postgresql database string
 
+# Setup on local
+
 ### Step 1
 
-1. run `npm install` in the root directory of project
-2. Fill up values in .env file
+run `npm install` in the root directory of project
+
+### Step 2
+
+Fill up values in .env file
 
 - DATABASE_URL: replace the username password with your credentials for your local database and make
   sure it is hosted on port 5432.
 - SALT: A complex string used to hash password.
 - SECRET: A complex string used to sign a jwt token.
 
-3.  run `npx prisma migrate dev --name init` to generate tables in your local DB
-4.  run `tsc`
-5.  populate database by running `node dist/utils/populate.js`
-6.  after that run `node dist/app.js`. This will start the backend on port 3000
+### Step 3
 
-### Routes for testing
+run `npx prisma migrate dev --name init` to generate tables in your local DB
+
+### Step 4
+
+run `tsc`
+
+### Step 5
+
+populate database by running `node dist/utils/populate.js`
+
+### Step 6
+
+after that run `node dist/app.js`. This will start the backend on port 3000
+
+# Routes
 
 1. POST : http://localhost:3000/api/register
 
